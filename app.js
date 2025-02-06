@@ -1,6 +1,7 @@
 require('dotenv').config();
 require('express-async-errors');
 
+console.log('MONGO_URI:', process.env.MONGO_URI);
 // External security packages
 const helmet = require('helmet');
 const cors = require('cors');

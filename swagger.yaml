@@ -21,7 +21,7 @@ paths:
               $ref: '#/components/schemas/RegisterUserRequest'
       responses:
         '200':
-          description: Пользователь успешно зарегистрирован.
+          description: User is succesfully registered
   /auth/login:
     post:
       tags:
@@ -36,7 +36,7 @@ paths:
               $ref: '#/components/schemas/LoginUserRequest'
       responses:
         '200':
-          description: Пользователь успешно вошёл в систему.
+          description: User logged in
   /jobs:
     post:
       tags:
@@ -51,7 +51,7 @@ paths:
               $ref: '#/components/schemas/CreateJobRequest'
       responses:
         '200':
-          description: Вакансия успешно создана.
+          description: Job position is created
     get:
       tags:
         - Jobs
@@ -59,7 +59,7 @@ paths:
       operationId: GetAllJobs
       responses:
         '200':
-          description: Все вакансии успешно получены.
+          description: All job positions are received.
   /jobs/{id}:
     parameters:
       - in: path
@@ -67,7 +67,7 @@ paths:
         schema:
           type: string
         required: true
-        description: Уникальный идентификатор вакансии.
+        description: Uniqe job position identifier
     get:
       tags:
         - Jobs
@@ -75,7 +75,7 @@ paths:
       operationId: GetSingleJob
       responses:
         '200':
-          description: Вакансия успешно получена.
+          description: The job position is succesfullly received
     patch:
       tags:
         - Jobs
@@ -89,7 +89,7 @@ paths:
               $ref: '#/components/schemas/UpdateJobRequest'
       responses:
         '200':
-          description: Вакансия успешно обновлена.
+          description: Job position is updated
     delete:
       tags:
         - Jobs
@@ -97,7 +97,7 @@ paths:
       operationId: DeleteJob
       responses:
         '200':
-          description: Вакансия успешно удалена.
+          description: Job position is deleted
 components:
   schemas:
     RegisterUserRequest:
@@ -151,7 +151,7 @@ security:
   - httpBearer: []
 tags:
   - name: Auth
-    description: Операции аутентификации (регистрация и вход).
+    description: Authinfication operations (registration and log in).
   - name: Jobs
-    description: Управление вакансиями.
+    description: Manage job positions.
 
